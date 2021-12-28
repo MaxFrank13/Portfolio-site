@@ -61,10 +61,10 @@ Variables
     --letterSpacing: 0.25rem;
     --gap: 1rem;
     --borderRadius: 0.5rem;
-    --shadow-1: 0 1px 2px 0 rgba(0, 0, 0, 0.6);
-    --shadow-2: 0 4px 6px 2px rgba(0, 0, 0, 0.6);
-    --shadow-3: 0 10px 15px 3px rgba(0, 0, 0, 0.8);
-    --shadow-4: 0 20px 25px 5px rgba(0, 0, 0, 0.8);
+    --shadow-1: 0 1px 2px 0 var(--primary-9);
+    --shadow-2: 0 4px 6px 2px var(--primary-9);
+    --shadow-3: 0 10px 15px 3px var(--primary-9);
+    --shadow-4: 0 20px 25px 5px var(--primary-9);
     --max-width: 1170px;
     --fixed-width: 620px;
 }
@@ -193,22 +193,23 @@ nav {
     font-size: 3.2rem;
     padding: 1.5rem;
     border-radius: 48%;
-    border: 1px solid var(--primary-9);
     box-shadow: var(--shadow-2);
-    background: var(--secondary-2);    
-    color: var(--primary-7);
+    background: radial-gradient(ellipse at 45% 65%, var(--primary-1), var(--secondary-2), var(--tertiary-5), var(--tertiary-7)); 
+    color: var(--primary-9);
 }
 .banner p {
     border-radius: var(--borderRadius);
     padding: 0.25rem;
     font-size: 0.95rem;
-    background: linear-gradient(var(--grey-3), var(--grey-7));
-    color: var(--secondary-1);
+    font-weight: 700;
+    background: radial-gradient(var(--primary-1), var(--primary-3));
+    color: var(--secondary-9);
 }
 .banner a {
+    border: 2px solid var(--primary-8);  
     width: 420px;
-    background: linear-gradient(var(--primary-8), var(--primary-4));
-    color: var(--secondary-1);
+    background: linear-gradient(var(--secondary-6), var(--secondary-3));
+    color: var(--primary-8);
     font-weight: 700;
 }
 
