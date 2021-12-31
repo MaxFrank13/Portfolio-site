@@ -1,62 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maxwell Frank Portfolio</title>
-    <link rel="stylesheet" href="assets/styles.css">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-    />
-</head>
-<body>
-    <header id="home">
-        <nav>
-            <div class="nav-header">
-                <button class="nav-toggle">
-											<i class="fas fa-bars"></i>
-                </button>
-            </div>
-            <div class="links-container">
-                <ul class="links">
-                    <li>
-                        <a class="btn scroll-link" href="#about">about</a>
-                    </li>
-                    <li>
-                        <a class="btn scroll-link" href="#services">services</a>
-                    </li>
-                    <li>
-                        <a class="btn scroll-link" href="#projects">projects</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <div class="banner">
-            <div class="banner-container">
-                <h1>maxwell frank</h1>
-                <p>Front End Web Developer</p>
-                <a class="btn scroll-link" href="#projects">Jump to Projects</a>
-            </div>
-        </div>
-    </header>
-    <section class="section" id="about">
-        <h3>about</h3>
 
-    </section>
-    <section class="section" id="services">
-        <h3>services</h3>
-    </section>
-    <section class="section" id="projects">
-        <h3>projects</h3>
-    </section>
-    <footer>
-        <h4>Thanks for checking out my portfolio!</h4>
-    </footer>
-		<a class="top-link scroll-link" href="#home">
-      <i class="fas fa-chevron-up"></i>
-    </a>
-    <script src="app.js"></script>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Maxwell Frank Portfolio</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+	<link href="https://languages.abranhe.com/logos.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+	<header id="home">
+		<nav>
+			<div class="nav-header">
+				<button class="nav-toggle">
+					<i class="fas fa-bars"></i>
+				</button>
+			</div>
+			<div class="links-container">
+				<ul class="links">
+					<li>
+						<a class="btn scroll-link" href="#about">about</a>
+					</li>
+					<li>
+						<a class="btn scroll-link" href="#services">services</a>
+					</li>
+					<li>
+						<a class="btn scroll-link" href="#projects">projects</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="banner">
+			<div class="banner-container">
+				<h2>Hello,</h2>
+				<h2>my name is</h2>
+				<h1>maxwell frank</h1>
+				<p>Front End Web Developer</p>
+				<a class="btn scroll-link" href="#projects">Jump to Projects</a>
+			</div>
+		</div>
+	</header>
+	<section class="page" id="about">
+		<section class="about-content">
+			<h2>Who <span class="text-contrast">am</span> I?</h2>
+			<p>A frontend developer based out of Southern Maine. I like to make a product that is simple and interactive while
+				adding a unique artistic flair.</p>
+			<p>Building and problem solving is inherent to who I am. Prior to working in web development, I was building
+				high-end furniture in workshops. That experience shaped my development style and continues to have a positive
+				influence.</p>
+			<p>I look to give clients a clean product that satisfies their needs while providing a cordial and prompt service.
+			</p>
+		</section>
+		<section class="contact">
+			<ul>
+				<li>Check out <span class="text-contrast">my</span><a href="https://github.com/MaxFrank13"
+						target="_blank">Github</a></li>
+				<li>Email: <span class="text-contrast">maxfrank13@gmail.com</span></li>
+			</ul>
+		</section>
+	</section>
+	<section class="page" id="services">
+		<h2>services</h2>
+		<div class="services-container">
+			<img class="logo" src="assets/media/images/html_256x256.png" alt="HTML logo">
+			<img class="logo" src="assets/media/images/css_256x256.png" alt="CSS logo">
+			<img class="logo" src="assets/media/images/javascript_256x256.png" alt="JavaScript logo">
+		</div>
+		<p>Currently working with the core web development languages: <span style="color: orange;">HTML5</span>, <span
+				style="color: #cb79d3;">CSS3</span>, and <span style="color: yellow;">JavaScript</span>; while continuing to
+			explore others. Even with just these three tools, a developer can create highly interactive and functional web
+			applications.</p>
+	</section>
+	<section class="page" id="projects">
+		<h2>projects</h2>
+		<div class="projects-container">
+			<a href="https://maxfrank13.github.io/BlackJack-game/" target="_blank">
+				<img class="project" src="assets/media/images/Blackjack-Casino-Game.png" alt="Blackjack card game">
+			</a>
+			<div class="video-container">
+				<a href="https://maxfrank13.github.io/Virtual-Kitchen/" target="_blank">Virtual Kitchen</a>
+				<video class="project" width="320" height="240" controls>
+					<source src="assets/media/Virtual-Kitchen-clip.mp4" type="video/mp4">
+				</video>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<h4>Thanks for checking out my portfolio!</h4>
+	</footer>
+	<a class="top-link scroll-link" href="#home">
+		<i class="fas fa-chevron-up"></i>
+	</a>
+	<script src="app.js"></script>
 </body>
+
 </html>

@@ -88,7 +88,7 @@ html {
 body {
     font-family: var(--ff-secondary);
     background: var(--grey-1);
-    color: var(--grey-9);
+    color: var(--grey-1);
     line-height: 1.5;
     font-size: 0.875rem;
 }
@@ -104,24 +104,27 @@ h2,
 h3,
 h4 {
     letter-spacing: var(--letterSpacing);
-    text-transform: capitalize;
     line-height: 0.75;
     font-family: var(--ff-primary);
 }
 h1 {
     font-size: 2rem;
+    text-transform: capitalize;
 }
 h2 {
-    font-size: 1rem;
+    font-size: 1.25rem;
 }
 h3 {
-    font-size: 0.75rem;
+    font-size: 1rem;
 }
 h4,
 p {
     letter-spacing: 0.1rem;
 
     font-size: 0.875rem;
+}
+.text-contrast {
+    color: var(--tertiary-5);
 }
 
 .btn {
@@ -155,8 +158,9 @@ Main Content
 /* Header and Nav */
 header {
     min-height: 100vh;
-    background: linear-gradient(rgba(226, 180, 154, 0.205), rgba(72, 197, 103, 0.233)),
-    url(./images/banner.jpg) center/cover no-repeat;
+    background: linear-gradient(rgba(226, 180, 154, 0.205), rgba(17, 42, 153, 0.233)),
+    url(./media/images/banner.jpg) center/cover no-repeat;
+    background-color: var(--primary-9);
 }
 nav {
     display: flex;
@@ -172,6 +176,7 @@ nav {
     border-color: transparent;
     transition: var(--transition);
     cursor: pointer;
+    padding-right: 2.5rem;
 }
 .links-container {
     height: 0;
@@ -186,6 +191,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-weight: 700;
 }
 
 .links li {
@@ -244,6 +250,7 @@ nav {
     align-content: center;
     place-items: center;
     text-align: center;
+    color: var(--white);
 }
 .banner-container {
     display: flex;
@@ -251,19 +258,22 @@ nav {
     align-items: center;
     gap: var(--gap);
     margin: 0 1rem 4rem;
+    background: rgba(187, 176, 176, 0.431);
+    border-radius: 5px;
+    padding: 2rem;
 }
 .banner h1 {
-    font-size: 3.2rem;
-    padding: 1.9rem;
+    padding: 0.3rem;
     border-radius: 48%;
-    background: radial-gradient(ellipse at 50% 52%, var(--primary-1), var(--secondary-2), var(--secondary-2), transparent, var(--grey-6));
+    line-height: 1;
+    /* background: radial-gradient(ellipse at 50% 52%, var(--primary-1), var(--secondary-2), var(--secondary-2), transparent, var(--grey-6)); */
 }
 .banner p {
     border-radius: var(--borderRadius);
     padding: 0.25rem;
     font-size: 0.95rem;
     font-weight: 700;
-    background: radial-gradient(ellipse at 45% 65%, var(--secondary-2), var(--tertiary-5), var(--tertiary-7));
+    background: radial-gradient(ellipse at 50% 50%, var(--secondary-3), var(--tertiary-3));
     color: var(--black);
 }
 .banner a {
@@ -278,19 +288,97 @@ nav {
 }
 
 /* Pages */
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 0;
+    background: var(--primary-9);
+}
+.page h2 {
+    margin-bottom: var(--gap);
+    text-decoration: underline;
 
-#about,
-#services,
-#projects {
-    height: 85vh;
+}
+/* about page */
+
+.about-content {
+    margin-top: var(--gap);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    max-width: 720px;
+    padding: 1rem;
+    background: var(--primary-5);
+    color: var(--white);
+    font-weight: 600;
+    line-height: 1.9;
+    border-radius: 5px 25px;
+}
+.about-content * {
+    padding: 0.35rem;
+    border-radius: var(--borderRadius);
+}
+.about-content p:nth-child(even) {
+    background: var(--grey-7);
+}
+.about-content p:nth-child(odd) {
+    background: var(--primary-1);
+    color: var(--grey-9);
+}
+.contact {
+    font-size: 1rem;
+    margin: 0 auto;
+    width: 60%;
+    max-width: 600px;
+    background: var(--grey-9);
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 0 0 5px 5px;
+}
+.contact * {
+    display: inline-block;
+    padding: 0.25rem;
+}
+.contact a {
+    color: var(--secondary-5);
+}
+.contact a:hover {
+    color: var(--secondary-2);
+}
+/* services page */
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: var(--gap);
+    background: var(--primary-1);
+    padding: var(--gap);
+    border-radius: 2px;
+}
+#services p {
+    max-width: 460px;
+    margin: var(--gap);
+    background: var(--grey-8);
+    border-radius: var(--borderRadius);
+    padding: var(--gap);
+}
+.logo {
+    width: 6rem;
+    padding: 0.2rem;
 }
 
-#about {
-    display: grid;
+/* Projects page */
 
+.projects-container {
+    display: flex;
+    align-items: center;
+    padding: var(--gap);
 }
-
-
+.projects-container * {
+    width: 50%;
+}
 footer {
     text-align: center;
     padding: 2rem;
@@ -304,7 +392,7 @@ Media Queries
 ===============
 */
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 512px) {
     h1 {
         font-size: 3rem;
     }
@@ -370,6 +458,30 @@ Media Queries
 
 }
 @media screen and (min-width: 1024px) {
+    h1 {
+        font-size: 5rem;
+      }
+    h2 {
+        font-size: 3.5rem;
+      }
+    h3 {
+        font-size: 2.75rem;
+      }
+    h4 {
+        font-size: 1.25rem;
+      }
+    body {
+        font-size: 2rem;
+      }
+    h1,
+    h2,
+    h3,
+    h4 {
+        line-height: 1;
+    }
+    p {
+        font-size: 1.2rem;
+    }
     nav {
         transition: var(--transition);
         width: 90vw;
