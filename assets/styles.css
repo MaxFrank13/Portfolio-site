@@ -66,7 +66,7 @@ Variables
     --shadow-3: 0 10px 15px 3px var(--grey-6);
     --shadow-4: 0 20px 25px 5px var(--grey-6);
     --max-width: 1170px;
-    --fixed-width: 620px;
+    --fixed-width: 720px;
 }
 
 /*
@@ -97,7 +97,7 @@ ul {
 }
 a {
     text-decoration: none;
-    color: var(--grey-9);
+    color: var(--primary-1);
 }
 h1,
 h2,
@@ -112,21 +112,31 @@ h1 {
     text-transform: capitalize;
 }
 h2 {
-    font-size: 1.25rem;
+    font-size: 1.85rem;
 }
 h3 {
-    font-size: 1rem;
+    font-size: 1.6rem;
+
 }
 h4,
 p {
     letter-spacing: 0.1rem;
-
-    font-size: 0.875rem;
+    font-size: 1rem;
 }
 .text-contrast {
     color: var(--tertiary-5);
 }
 
+img {
+    width: 100%;
+    display: block;
+    padding-top: var(--gap);
+}
+video {
+    width: 100%;
+    display: block;
+    padding-top: var(--gap);
+}
 .btn {
     margin-bottom: 0.35rem;
     text-transform: uppercase;
@@ -296,10 +306,18 @@ nav {
     padding: 1rem 0;
     background: var(--primary-9);
 }
-.page h2 {
+.page:nth-child(odd) {
+    background: var(--primary-8);
+}
+.page h3 {
     margin-bottom: var(--gap);
     text-decoration: underline;
-
+}
+#services h2,
+#projects h2 {
+    text-decoration: underline;
+    font-size: 3.3rem;
+    margin-bottom: var(--gap);
 }
 /* about page */
 
@@ -308,17 +326,23 @@ nav {
     display: flex;
     flex-direction: column;
     gap: var(--gap);
-    max-width: 720px;
+    max-width: var(--fixed-width);
     padding: 1rem;
     background: var(--primary-5);
     color: var(--white);
+    text-align: left;
     font-weight: 600;
     line-height: 1.9;
     border-radius: 5px 25px;
 }
 .about-content * {
-    padding: 0.35rem;
+    padding: 0.55rem;
     border-radius: var(--borderRadius);
+}
+.about-content img {
+    padding: var(--gap);
+    border-radius: 50%;
+    box-shadow: 4px 2px 15px 2px var(--primary-3);
 }
 .about-content p:nth-child(even) {
     background: var(--grey-7);
@@ -349,13 +373,17 @@ nav {
 }
 /* services page */
 
+#services {
+    gap: var(--gap);
+}
+
 .services-container {
     display: flex;
     justify-content: center;
     gap: var(--gap);
-    background: var(--primary-1);
+    background: radial-gradient(var(--primary-1) 47%, var(--primary-8), var(--primary-9));
     padding: var(--gap);
-    border-radius: 2px;
+    border-radius: 50%;
 }
 #services p {
     max-width: 460px;
@@ -363,21 +391,43 @@ nav {
     background: var(--grey-8);
     border-radius: var(--borderRadius);
     padding: var(--gap);
+    font-weight: 600;
 }
 .logo {
     width: 6rem;
     padding: 0.2rem;
+}
+.logo:hover {
+    transform: scale(1.2);
 }
 
 /* Projects page */
 
 .projects-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     padding: var(--gap);
+    gap: 2rem;
+    line-height: 1.2;
+    letter-spacing: 0.15rem;
 }
-.projects-container * {
-    width: 50%;
+.projects-container > * {
+    width: 70%;
+    max-width: var(--fixed-width);
+    color: var(--primary-1);
+}
+
+.projects-container .btn {
+    background: var(--primary-5);
+    font-family: var(--ff-primary);
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.projects-container p {
+    margin-bottom: 0.25rem;
+    font-style: italic;
 }
 footer {
     text-align: center;
@@ -400,9 +450,17 @@ Media Queries
         font-size: 2rem;
     }
     h3 {
-        font-size: 1.25rem;
+        font-size: 1.85rem;
     }
-    
+    h4 {
+        font-size: 1.1rem;
+    }
+    .projects-container {
+        line-height: 2;
+    }
+    .projects-container .btn {
+        font-size: 1.5rem;
+    }
 }
 @media screen and (min-width: 768px) {
     h1 {
@@ -412,10 +470,10 @@ Media Queries
         font-size: 2.5rem;
       }
     h3 {
-        font-size: 1.75rem;
+        font-size: 2.1rem;
       }
     h4 {
-        font-size: 1rem;
+        font-size: 1.3rem;
       }
     body {
         font-size: 1rem;
@@ -455,7 +513,12 @@ Media Queries
     .fixed-nav li:last-child {
         margin-right: 4rem;
     }
-
+    .services-container {
+        padding: 2rem;
+    }
+    .contact {
+        font-size: 1.25rem;
+    }
 }
 @media screen and (min-width: 1024px) {
     h1 {
@@ -488,5 +551,8 @@ Media Queries
     }
     .fixed-nav li:last-child{
         margin-right: 9rem;
+    }
+    .contact {
+        font-size: 1.5rem;
     }
 }
