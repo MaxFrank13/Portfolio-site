@@ -239,12 +239,12 @@ nav {
     font-size: 1.25rem;
     position: fixed;
     bottom: 2rem;
-    right: 2rem;
+    right: 5%;
     background: radial-gradient(circle at 20% 20%, var(--secondary-5), var(--secondary-9));
     display: grid;
     padding: 0.5rem;
     border-radius: var(--borderRadius);
-    animation: bounce 2s ease-in-out infinite;
+    animation: bounce 4s ease-in-out infinite;
     visibility: hidden;
     z-index: -100;
 }
@@ -425,6 +425,11 @@ nav {
     font-weight: 700;
     text-transform: capitalize;
 }
+.projects-container .btn:hover {
+    background: var(--tertiary-6);;
+    color: var(--secondary-1);
+    border: 2px solid var(--secondary-8);
+}
 .projects-container p {
     margin-bottom: 0.25rem;
     font-style: italic;
@@ -555,4 +560,26 @@ Media Queries
     .contact {
         font-size: 1.5rem;
     }
+    .top-link {
+        right: 8%;
+        font-size: 1.8rem;
+    }
 }
+
+/*
+=============== 
+Animation
+===============
+*/
+
+@keyframes bounce {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
