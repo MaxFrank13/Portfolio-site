@@ -2,6 +2,11 @@ const navToggle = document.querySelector(".nav-toggle");
 const linksContainer = document.querySelector(".links-container");
 const navbar = document.querySelector("nav");
 const topLink = document.querySelector(".top-link");
+const portrait_img = document.querySelector(".fixed-img");
+const portrait_icon = document.querySelector(".portrait-icon");
+const close_icon = document.querySelector(".close");
+
+console.log(portrait_img);
 
 // **** Toggle links menu ****
 
@@ -56,4 +61,16 @@ scrollLinks.forEach((link) => {
         // if link menu is open this will close it
         linksContainer.classList.remove("show-links");
     })
+})
+
+// **** Profile pic hover functionality ****
+
+portrait_icon.addEventListener("click", function () {
+    portrait_img.classList.remove("hide-img");
+    portrait_icon.classList.add("hide-img");
+});
+
+close_icon.addEventListener("click", function() {
+    portrait_img.classList.add("hide-img");
+    portrait_icon.classList.remove("hide-img");
 })

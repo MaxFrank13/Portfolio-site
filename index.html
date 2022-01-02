@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Maxwell Frank Portfolio</title>
+	<link rel="shortcut icon" type="image/png" href="assets/media/images/Portfolio-icon.png">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
 	<link href="https://languages.abranhe.com/logos.css" rel="stylesheet">
 	<link rel="stylesheet" href="assets/styles.css">
@@ -45,8 +46,14 @@
 	</header>
 	<section class="page" id="about">
 		<section class="about-content">
-			<h2>Who <span class="text-contrast">am</span> I?</h2>
-			<img class="profile-pic" src="assets/media/images/portrait.jpg" alt="Profile picture">
+			<h2>
+				Who <span class="text-contrast">am</span> I?
+				<i class="portrait-icon fas fa-portrait"></i>
+			</h2>
+			<div class="fixed-img hide-img">
+				<i class="fas fa-window-close close"></i>
+				<img class="profile-pic" src="assets/media/images/portrait.jpg" alt="Profile picture">
+			</div>
 			<p>
 				A front-end developer based out of Southern Maine. I like to make a product that is simple and interactive while
 				adding a unique artistic flair.
@@ -58,13 +65,21 @@
 			</p>
 			<p>
 				I look to give clients a clean product that satisfies their needs while providing a cordial and prompt service.
+
 			</p>
 		</section>
 		<section class="contact">
 			<ul>
-				<li>Check out <span class="text-contrast">my</span><a href="https://github.com/MaxFrank13"
-						target="_blank">Github</a></li>
-				<li>Email: <span class="text-contrast">maxfrank13@gmail.com</span></li>
+				<li>Contact me at</li>
+				<li><span class="text-contrast"><a href="mailto:maxfrank13@gmail.com"><i class="fas fa-envelope"></i></a></span></li>
+				<li><a href="tel:1-908-370-6530"><i class="fas fa-phone"></i></a></li>
+				<li><a href="https://twitter.com/CrayonProfessor"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+			<ul>
+				<li>Check out</li>
+				<li><span class="text-contrast"><a href="https://github.com/MaxFrank13"
+					target="_blank"><i class="fab fa-github"></i></a></span></li>
+				<li><span class="text-contrast"><a href="https://www.linkedin.com/in/maxwell-frank-b42809227/" target=><i class="fab fa-linkedin"></i></a></span></li>
 			</ul>
 		</section>
 	</section>
@@ -76,9 +91,10 @@
 			<img class="logo" src="assets/media/images/javascript_256x256.png" alt="JavaScript logo">
 		</div>
 		<p>
-			Currently working with the core web development languages: 	<span style="color: orange;">HTML5</span>, 
-			<span style="color: #cb79d3;">CSS3</span>, and 
-			<span style="color: yellow;">JavaScript</span>; while continuing to explore others. Even with just these three tools, a developer can create highly interactive and functional web applications.
+			Currently working with the core web development languages: <span style="color: orange;">HTML5</span>,
+			<span style="color: #cb79d3;">CSS3</span>, and
+			<span style="color: yellow;">JavaScript</span>; while continuing to explore others. Even with just these three
+			tools, a developer can create highly interactive and functional web applications.
 		</p>
 	</section>
 	<section class="page" id="projects">
@@ -92,7 +108,7 @@
 			<div class="video-container">
 				<a class="btn" href="https://maxfrank13.github.io/Virtual-Kitchen/" target="_blank">Virtual Kitchen</a>
 				<p>An app designed to make sorting groceries easier</p>
-				<video class="project" controls>
+				<video class="project" muted autoplay loop>
 					<source src="assets/media/Virtual-Kitchen-clip.mp4" type="video/mp4">
 				</video>
 			</div>

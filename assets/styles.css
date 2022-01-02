@@ -124,7 +124,7 @@ p {
     font-size: 1rem;
 }
 .text-contrast {
-    color: var(--tertiary-5);
+    color: var(--secondary-5);
 }
 
 img {
@@ -225,6 +225,7 @@ nav {
     width: 100%;
     background: var(--primary-1);
     box-shadow: var(--shadow-2);
+    z-index: 99;
 }
 
 .fixed-nav .btn {
@@ -322,28 +323,45 @@ nav {
 /* about page */
 
 .about-content {
+    position: relative;
     margin-top: var(--gap);
     display: flex;
     flex-direction: column;
     gap: var(--gap);
     max-width: var(--fixed-width);
     padding: 1rem;
-    background: var(--primary-5);
-    color: var(--white);
+    background: var(--grey-5);
     text-align: left;
     font-weight: 600;
     line-height: 1.9;
     border-radius: 5px 25px;
 }
-.about-content * {
+.about-content p {
     padding: 0.55rem;
     border-radius: var(--borderRadius);
 }
-.about-content img {
-    padding: var(--gap);
-    border-radius: 50%;
-    box-shadow: 4px 2px 15px 2px var(--primary-3);
+.fixed-img {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
 }
+.portrait-icon:hover {
+    color: var(--secondary-3);
+}
+.close:hover {
+    color: var(--tertiary-5);
+}
+.about-content img {
+    width: 43%;
+    padding: 0.25rem;
+    border-radius: 50%;
+    box-shadow: 4px 2px 15px 2px var(--primary-8);
+    display: inline-block;
+}
+.hide-img {
+    display: none;
+}
+
 .about-content p:nth-child(even) {
     background: var(--grey-7);
 }
@@ -361,11 +379,14 @@ nav {
     text-align: center;
     border-radius: 0 0 5px 5px;
 }
-.contact * {
-    display: inline-block;
-    padding: 0.25rem;
+.contact ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
 }
 .contact a {
+    font-size: 1.4rem;
     color: var(--secondary-5);
 }
 .contact a:hover {
@@ -478,16 +499,19 @@ Media Queries
         font-size: 2.1rem;
       }
     h4 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
       }
     body {
-        font-size: 1rem;
+        font-size: 1.2rem;
       }
     h1,
     h2,
     h3,
     h4 {
         line-height: 1;
+    }
+    p {
+        font-size: 1.1rem;
     }
     nav {
         background: transparent;
@@ -523,6 +547,12 @@ Media Queries
     }
     .contact {
         font-size: 1.25rem;
+    }
+    .contact a {
+        font-size: 3rem;
+    }
+    .about-content img {
+        padding: 0.55rem;
     }
 }
 @media screen and (min-width: 1024px) {
