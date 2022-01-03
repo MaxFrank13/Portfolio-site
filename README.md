@@ -4,7 +4,7 @@
 
 My portfolio site demonstrating my skills and services. Using this as a hub for all of my most notable web development accomplishments, I will be able to show prospective employers and partners my capabilities. I will also continue to use the portfolio site as a place to practice and hone unique development techniques (i.e. interactive elements, animations, color palettes, JavaScript applications, etc).
 
-[![Portfolio video tour](/assets/media/images/Portfolio-home.png)](https://maxfrank13.github.io/Portfolio-site/)
+[![Portfolio video tour](https://github.com/MaxFrank13/Portfolio-site/blob/main/assets/media/images/Portfolio-home.PNG)](https://maxfrank13.github.io/Portfolio-site/)
 
 
 ## What's happening in the code
