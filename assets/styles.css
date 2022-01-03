@@ -126,13 +126,11 @@ p {
 .text-contrast {
     color: var(--secondary-5);
 }
-
-img {
-    width: 100%;
-    display: block;
-    padding-top: var(--gap);
+.small-text {
+    letter-spacing: 1;
+    font-size: 0.55rem;
 }
-video {
+img {
     width: 100%;
     display: block;
     padding-top: var(--gap);
@@ -165,7 +163,35 @@ Main Content
 ===============
 */
 
+/* Preloader */
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--grey-5);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    z-index: 999;
+    transition: var(--transition);
+  }
+.preloader-item {
+    background: radial-gradient(var(--primary-1), var(--grey-5), transparent);
+    color:var(--grey-1);
+    font-size: 10rem;
+    padding: 5rem;
+}
+.hide-preloader {
+    z-index: -999;
+    visibility: hidden;
+}
+
 /* Header and Nav */
+
 header {
     min-height: 100vh;
     background: linear-gradient(rgba(226, 180, 154, 0.205), rgba(17, 42, 153, 0.233)),
@@ -203,7 +229,6 @@ nav {
     align-items: center;
     font-weight: 700;
 }
-
 .links li {
     text-align: center;
     font-size: 1.65rem;
@@ -227,15 +252,12 @@ nav {
     box-shadow: var(--shadow-2);
     z-index: 99;
 }
-
 .fixed-nav .btn {
     border: 2px solid var(--tertiary-6);
 }
-
 .fixed-nav .btn:hover {
     border: 2px solid var(--tertiary-3);
 }
-
 .top-link {
     font-size: 1.25rem;
     position: fixed;
@@ -245,7 +267,7 @@ nav {
     display: grid;
     padding: 0.5rem;
     border-radius: var(--borderRadius);
-    animation: bounce 4s ease-in-out infinite;
+    animation: pulse 4s ease-in-out infinite;
     visibility: hidden;
     z-index: -100;
 }
@@ -277,7 +299,6 @@ nav {
     padding: 0.3rem;
     border-radius: 48%;
     line-height: 1;
-    /* background: radial-gradient(ellipse at 50% 52%, var(--primary-1), var(--secondary-2), var(--secondary-2), transparent, var(--grey-6)); */
 }
 .banner p {
     border-radius: var(--borderRadius);
@@ -307,7 +328,7 @@ nav {
     padding: 1rem 0;
     background: var(--primary-9);
 }
-.page:nth-child(odd) {
+.page:nth-child(even) {
     background: var(--primary-8);
 }
 .page h3 {
@@ -417,6 +438,7 @@ nav {
 .logo {
     width: 6rem;
     padding: 0.2rem;
+    transition: var(--transition);
 }
 .logo:hover {
     transform: scale(1.2);
@@ -434,27 +456,67 @@ nav {
     letter-spacing: 0.15rem;
 }
 .projects-container > * {
-    width: 70%;
     max-width: var(--fixed-width);
     color: var(--primary-1);
 }
 
 .projects-container .btn {
-    background: var(--primary-5);
+    display: inline-grid;
+    background: var(--primary-6);
     font-family: var(--ff-primary);
     font-size: 1rem;
     font-weight: 700;
     text-transform: capitalize;
+    line-height: 1.25;
 }
 .projects-container .btn:hover {
     background: var(--tertiary-6);;
     color: var(--secondary-1);
     border: 2px solid var(--secondary-8);
+    transform: scale(1.1);
 }
 .projects-container p {
     margin-bottom: 0.25rem;
     font-style: italic;
+    font-size: 0.65rem;
 }
+.project {
+    width: 100%;
+    border: 2px solid var(--primary-9);
+}
+
+/* Slider */
+.slider-interface {
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+}
+
+.slider-container {
+    width: 60vw;
+    margin: 0 auto;
+    height: 35vh;
+    max-width: 80rem;
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    padding-top: var(--gap);
+  }
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-9);
+    color: var(--white);
+    transition: all 0.25s ease-in-out;
+    text-align: center;
+}
+.prev-btn,
+.next-btn {
+    font-size: 2rem;
+    margin-top: 7rem;
+}
+
 footer {
     text-align: center;
     padding: 2rem;
@@ -487,7 +549,14 @@ Media Queries
     .projects-container .btn {
         font-size: 1.5rem;
     }
+    .projects-container p {
+        font-size: 1rem;
+    }
+    .slider-container {
+        height: 40vh;
+    }
 }
+
 @media screen and (min-width: 768px) {
     h1 {
         font-size: 4rem;
@@ -554,6 +623,10 @@ Media Queries
     .about-content img {
         padding: 0.55rem;
     }
+    .prev-btn,
+    .next-btn {
+        font-size: 5rem;
+    }
 }
 @media screen and (min-width: 1024px) {
     h1 {
@@ -594,6 +667,10 @@ Media Queries
         right: 8%;
         font-size: 1.8rem;
     }
+    .slider-container {
+        height: 50vh;
+    }
+
 }
 
 /*
@@ -602,7 +679,7 @@ Animation
 ===============
 */
 
-@keyframes bounce {
+@keyframes pulse {
     0% {
       transform: scale(1);
     }

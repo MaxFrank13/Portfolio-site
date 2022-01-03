@@ -8,11 +8,15 @@
 	<title>Maxwell Frank Portfolio</title>
 	<link rel="shortcut icon" type="image/png" href="assets/media/images/Portfolio-icon.png">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
-	<link href="https://languages.abranhe.com/logos.css" rel="stylesheet">
 	<link rel="stylesheet" href="assets/styles.css">
 </head>
 
 <body>
+	<!-- preloader -->
+	<div class="preloader">
+		<i class="preloader-item fas fa-spinner"></i>
+	</div>
+	<!-- header -->
 	<header id="home">
 		<nav>
 			<div class="nav-header">
@@ -34,6 +38,7 @@
 				</ul>
 			</div>
 		</nav>
+		<!-- home banner -->
 		<div class="banner">
 			<div class="banner-container">
 				<h2>Hello,</h2>
@@ -44,6 +49,7 @@
 			</div>
 		</div>
 	</header>
+	<!-- about page -->
 	<section class="page" id="about">
 		<section class="about-content">
 			<h2>
@@ -55,34 +61,42 @@
 				<img class="profile-pic" src="assets/media/images/portrait.jpg" alt="Profile picture">
 			</div>
 			<p>
-				A front-end developer based out of Southern Maine. I like to make a product that is simple and interactive while
+				A front-end developer based out of Southern Maine. I like to make a product that is simple and
+				interactive while
 				adding a unique artistic flair.
 			</p>
 			<p>
-				Building and problem solving are inherent to who I am. Prior to working in web development, I was building
-				high-end furniture in workshops. That experience shaped my development style and continues to have a positive
+				Building and problem solving are inherent to who I am. Prior to working in web development, I was
+				building
+				high-end furniture in workshops. That experience shaped my development style and continues to have a
+				positive
 				influence.
 			</p>
 			<p>
-				I look to give clients a clean product that satisfies their needs while providing a cordial and prompt service.
+				I look to give clients a clean product that satisfies their needs while providing cordial and prompt
+				service.
 
 			</p>
 		</section>
+		<!-- contact info -->
 		<section class="contact">
 			<ul>
 				<li>Contact me at</li>
-				<li><span class="text-contrast"><a href="mailto:maxfrank13@gmail.com"><i class="fas fa-envelope"></i></a></span></li>
+				<li><span class="text-contrast"><a href="mailto:maxfrank13@gmail.com"><i class="fas fa-envelope"></i></a></span>
+				</li>
 				<li><a href="tel:1-908-370-6530"><i class="fas fa-phone"></i></a></li>
 				<li><a href="https://twitter.com/CrayonProfessor"><i class="fab fa-twitter"></i></a></li>
 			</ul>
 			<ul>
 				<li>Check out</li>
-				<li><span class="text-contrast"><a href="https://github.com/MaxFrank13"
-					target="_blank"><i class="fab fa-github"></i></a></span></li>
-				<li><span class="text-contrast"><a href="https://www.linkedin.com/in/maxwell-frank-b42809227/" target=><i class="fab fa-linkedin"></i></a></span></li>
+				<li><span class="text-contrast"><a href="https://github.com/MaxFrank13" target="_blank"><i
+								class="fab fa-github"></i></a></span></li>
+				<li><span class="text-contrast"><a href="https://www.linkedin.com/in/maxwell-frank-b42809227/" target=><i
+								class="fab fa-linkedin"></i></a></span></li>
 			</ul>
 		</section>
 	</section>
+	<!-- services page -->
 	<section class="page" id="services">
 		<h2>services</h2>
 		<div class="services-container">
@@ -93,10 +107,12 @@
 		<p>
 			Currently working with the core web development languages: <span style="color: orange;">HTML5</span>,
 			<span style="color: #cb79d3;">CSS3</span>, and
-			<span style="color: yellow;">JavaScript</span>; while continuing to explore others. Even with just these three
+			<span style="color: yellow;">JavaScript</span>; while continuing to explore others. Even with just these
+			three
 			tools, a developer can create highly interactive and functional web applications.
 		</p>
 	</section>
+	<!-- projects page -->
 	<section class="page" id="projects">
 		<h2>projects</h2>
 		<div class="projects-container">
@@ -105,18 +121,56 @@
 				<p>my first application</p>
 				<img class="project" src="assets/media/images/Blackjack-Casino-Game.png" alt="Blackjack card game">
 			</a>
-			<div class="video-container">
-				<a class="btn" href="https://maxfrank13.github.io/Virtual-Kitchen/" target="_blank">Virtual Kitchen</a>
-				<p>An app designed to make sorting groceries easier</p>
-				<video class="project" muted autoplay loop>
-					<source src="assets/media/Virtual-Kitchen-clip.mp4" type="video/mp4">
-				</video>
+			<!-- slider -->
+			<div class="slider-interface">
+				<i class="prev-btn fas fa-caret-left"></i>
+				<!-- slides -->
+				<div class="slider-container">
+					<a href="https://maxfrank13.github.io/Virtual-Kitchen/" target="_blank" class="slide">
+						<h4 class="btn">Virtual Kitchen</h4>
+						<p>An app designed to make sorting groceries easier</p>
+						<video class="project" muted autoplay loop>
+							<source src="assets/media/Virtual-Kitchen-clip.mp4" type="video/mp4">
+						</video>
+					</a>
+					<a href="#" class="slide">
+						<h4 class="btn">Bulletin board app<span class="small-text">(placeholder)</span></h4>
+						<p>A place where groups/classrooms can post content on a virtual bulletin board</p>
+						<div class="project">
+							<img src="assets/media/images/placeholder.jpg" alt="Flower placeholder image">
+						</div>
+					</a>
+					<a href="#" class="slide">
+						<h4 class="btn">Maine Hiking Trail review app<span class="small-text">(placeholder)</span></h4>
+						<p>Tool for finding new places to adventure in the great state of Maine</p>
+						<div class="project">
+							<img src="assets/media/images/placeholder.jpg" alt="Flower placeholder image">
+						</div>
+					</a>
+					<a href="#" class="slide">
+						<h4 class="btn">Platformer game<span class="small-text">(placeholder)</span></h4>
+						<p>Simple platformer game using HTML canvas</p>
+						<div class="project">
+							<img src="assets/media/images/placeholder.jpg" alt="Flower placeholder image">
+						</div>
+					</a>
+					<a href="#" class="slide">
+						<h4 class="btn">Custom Jeopardy<span class="small-text">(placeholder)</span></h4>
+						<p>A browser app that allows you to customize your own trivia game</p>
+						<div class="project">
+							<img src="assets/media/images/placeholder.jpg" alt="Flower placeholder image">
+						</div>
+					</a>
+				</div>
+				<i class="next-btn fas fa-caret-right"></i>
 			</div>
 		</div>
 	</section>
+	<!-- footer -->
 	<footer>
 		<h4>Thanks for checking out my portfolio!</h4>
 	</footer>
+	<!-- go-to-top link -->
 	<a class="top-link scroll-link" href="#home">
 		<i class="fas fa-chevron-up"></i>
 	</a>
